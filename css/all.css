@@ -1,0 +1,107 @@
+@import url('../fonts/Poppins/font-face.css');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --colors-1-lighter: #DFC2A9;
+  --colors-1-light: #E0AD81;
+  --colors-1-base: #F48120;
+  --colors-1-dark: #813F00;
+  --colors-1-darker: #3B1C00;
+
+  --colors-2-lighter: #DFC2A9;
+  --colors-2-light: #E0AD81;
+  --colors-2-base: #396CCD;
+  --colors-2-dark: #813F00;
+  --colors-2-darker: #3B1C00;
+
+  --colors-semantic-error-base: #EB2525;
+
+  --colors-background-1: #FFFFFF;
+  --colors-background-2: var(--colors-1-lighter);
+  
+  --colors-text-primary: #262626;
+  --colors-text-secondary: #808080;
+  --colors-text-on-color: #FFFFFF;
+
+  --transition-time: .3s;
+  
+  --box-shadow: #26262680 1.95px 1.95px 2.6px;
+
+  --nav-height: 10vh;
+
+  --transition-time: .3s;
+}
+
+body {
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  background-color: var(--colors-background-1);
+  margin-top: var(--nav-height);
+  color: var(--colors-text-primary);
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 0.25rem solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  background-color: var(--colors-1-base);
+}
+
+nav {
+  width: 100%;
+  height: var(--nav-height);
+  background-color: var(--colors-2-base);
+  padding: 0 3%;
+  color: var(--colors-text-on-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav img {
+  width: 15rem;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition-time);
+}
+
+nav ul li:hover, nav ul li.active {
+  border-color: var(--colors-text-on-color);
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: unset;
+}
+
+section {
+  width: 100%;
+  padding: 3rem;
+}
