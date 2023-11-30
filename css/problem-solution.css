@@ -43,7 +43,7 @@ div#problem-cards div.card i {
 }
 
 section#graphic {
-  background-image: url('/images/wave-white-orange.svg');
+  background-image: url('../images/wave-white-orange.svg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
