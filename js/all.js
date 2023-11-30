@@ -42,8 +42,3 @@ function showAlert(message, type) {
     }, 300);
   }, 3000);
 }
-
-
-var base = document.createElement('base');
-base.href = '/front/';
-document.querySelector('head').append(base);
