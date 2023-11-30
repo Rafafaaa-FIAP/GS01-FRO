@@ -1,0 +1,54 @@
+
+body {
+  background-image: url('../images/wave-white-orange.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section#contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#contact-left {
+  width: 50%;
+  height: fit-content;
+  padding: 5rem;
+  background-color: #FFFFFF;
+  border: 0.5rem solid var(--colors-1-base);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+div#contact-right {
+  width: 39%;
+  height: fit-content;
+  background-color: #FFFFFF;
+  padding: 3rem;
+  border: 0.5rem solid var(--colors-1-base);
+  border-radius: 100%;
+  transition: scale var(--transition-time);
+}
+
+div#contact-right:hover {
+  scale: 1.05;
+}
+
+form#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form#contact-form div.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form#contact-form button {
+  width: 100%;
+}

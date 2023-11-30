@@ -1,3 +1,4 @@
+
 @import url('../fonts/Poppins/font-face.css');
 
 * {
@@ -11,19 +12,20 @@
   --colors-1-lighter: #DFC2A9;
   --colors-1-light: #E0AD81;
   --colors-1-base: #F48120;
-  --colors-1-dark: #813F00;
-  --colors-1-darker: #3B1C00;
+  --colors-1-dark: #AB5400;
+  --colors-1-darker: #2D1500;
 
-  --colors-2-lighter: #DFC2A9;
-  --colors-2-light: #E0AD81;
+  --colors-2-lighter: #B6CFFF;
+  --colors-2-light: #6A97EE;
   --colors-2-base: #396CCD;
-  --colors-2-dark: #813F00;
-  --colors-2-darker: #3B1C00;
+  --colors-2-dark: #0A317A;
+  --colors-2-darker: #00143D;
 
+  --colors-semantic-success-base: #23AD42;
   --colors-semantic-error-base: #EB2525;
 
   --colors-background-1: #FFFFFF;
-  --colors-background-2: var(--colors-1-lighter);
+  --colors-background-2: #E6E6E6;
   
   --colors-text-primary: #262626;
   --colors-text-secondary: #808080;
@@ -31,11 +33,13 @@
 
   --transition-time: .3s;
   
-  --box-shadow: #26262680 1.95px 1.95px 2.6px;
+  --box-shadow: #26262680 2px 2px 3px;
+
+  --text-field-color: var(--colors-text-primary);
+  --text-field-font-size-medium: 1.2rem;
+  --text-field-font-size-smaller: 0.75rem;
 
   --nav-height: 10vh;
-
-  --transition-time: .3s;
 }
 
 body {
@@ -55,6 +59,109 @@ body::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background-clip: padding-box;
   background-color: var(--colors-1-base);
+}
+
+.text-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: text;
+}
+
+.text-field fieldset {
+  width: 100%;
+  padding: 0 10px 5px 0;
+  border: 1px solid var(--text-field-color);
+  border-radius: 5px;
+  position: relative;
+  transition: border-color var(--transition-time), color var(--transition-time);
+}
+
+.text-field fieldset:has(input:focus) {
+  border-width: 2px;
+  border-color: var(--colors-1-base);
+}
+
+.text-field fieldset label, .text-field fieldset span {
+  padding: 0 5px;
+  pointer-events: none;
+}
+
+.text-field fieldset legend {
+  max-width: 0.01px;
+  margin-left: 7px;
+  font-size: var(--text-field-font-size-smaller);
+  text-wrap: nowrap;
+  opacity: 0;
+  transition: max-width var(--transition-time);
+}
+
+.text-field fieldset input {
+  width: 97%;
+  border: none;
+  font-size: var(--text-field-font-size-medium);
+  color: var(--colors-text-primary);
+  outline: none;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.text-field fieldset input::placeholder {
+  color: transparent;
+}
+
+.text-field fieldset input:focus + legend,
+.text-field fieldset input:not(:placeholder-shown) + legend {
+  max-width: 100%;
+}
+
+.text-field fieldset .placeholder {
+  margin-left: 7px;
+  font-size: var(--text-field-font-size-medium);
+  font-weight: 500;
+  color: var(--text-field-color);
+  position: absolute;
+  top: -5%;
+  left: 0;
+  transition: font-size var(--transition-time), top var(--transition-time);
+}
+
+.text-field fieldset input:focus ~ .placeholder {
+  color: var(--colors-1-base);
+}
+
+.text-field fieldset input:focus ~ .placeholder,
+.text-field fieldset input:not(:placeholder-shown) ~ .placeholder {
+  font-size: var(--text-field-font-size-smaller);
+  top: -55%;
+}
+
+.text-field fieldset:has(input.invalid) {
+  border-width: 2px;
+  border-color: var(--colors-semantic-error-base);
+}
+
+.text-field fieldset input.invalid ~ .placeholder {
+  color: var(--colors-semantic-error-base);
+}
+
+button.default {
+  width: max-content;
+  background-color: var(--colors-1-base);
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--colors-text-on-color);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: background-color var(--transition-time), scale var(--transition-time);
+}
+
+button.default:hover {
+  background-color: var(--colors-1-dark);
+  scale: 1.05;
 }
 
 nav {
@@ -78,6 +185,11 @@ nav img {
   background-color: #FFFFFF;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  transition: scale var(--transition-time);
+}
+
+nav img:hover {
+  scale: 1.05;
 }
 
 nav ul {
@@ -101,7 +213,46 @@ h1, h2, h3, h4, h5 {
   font-size: unset;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-weight: 500;
+}
+
 section {
   width: 100%;
   padding: 3rem;
+}
+
+div#alert {
+  background-color: var(--colors-background-1);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  top: calc(var(--nav-height) + 1rem);
+  left: 1rem;
+  box-shadow: var(--box-shadow);
+  font-size: 1.25rem;
+  opacity: 0;
+  transition: opacity var(--transition-time);
+}
+
+div#alert.shown {
+  opacity: 1;
+}
+
+div#alert.success {
+  background-color: var(--colors-semantic-success-base);
+  color: var(--colors-text-on-color);
+}
+
+div#alert.error {
+  background-color: var(--colors-semantic-error-base);
+  color: var(--colors-text-on-color);
 }

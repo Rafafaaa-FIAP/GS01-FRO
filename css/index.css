@@ -1,8 +1,14 @@
 
 body {
-  background-image: url('../images/wave.svg');
+  background-image: url('../images/wave-orange-white.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+h1 {
+  width: fit-content;
+  border-bottom: 5px solid;
+  color: var(--colors-text-on-color);
 }
 
 section#banner {
@@ -12,7 +18,7 @@ section#banner {
   align-items: center;
 }
 
-div#banner-left {
+div#banner-left * {
   font-size: 2.5rem;
   font-weight: 700;
 }
@@ -23,4 +29,22 @@ div#banner-right {
   background-color: #FFFFFF;
   padding: 1.5rem;
   border-radius: 100%;
+  transition: scale var(--transition-time);
+}
+
+div#banner-right:hover {
+  scale: 1.05;
+}
+
+section#infos {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+div#infos-right {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
