@@ -9,6 +9,11 @@ function changePage(event, path) {
   if (!path) {
     path = event.target.getAttribute('path');
   }
+
+  if (window.location.hostname.includes('github.io')) {
+    path = '/front/' + path;
+  }
+
   window.location = path;
 }
 
