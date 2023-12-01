@@ -26,7 +26,7 @@ div#banner-left * {
 div#banner-right {
   width: 30%;
   height: fit-content;
-  background-color: #FFFFFF;
+  background-color: var(--colors-background-1);
   padding: 1.5rem;
   border-radius: 100%;
   transition: scale var(--transition-time);

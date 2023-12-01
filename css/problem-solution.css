@@ -65,6 +65,11 @@ div#graphic-left {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: scale var(--transition-time);
+}
+
+div#graphic-left:hover {
+  scale: 1.05;
 }
 
 div#graphic-left p {
@@ -87,7 +92,7 @@ section#solution {
 div#solution-left {
   width: 30%;
   height: fit-content;
-  background-color: #FFFFFF;
+  background-color: var(--colors-background-1);
   padding: 3rem;
   border-radius: 100%;
   transition: scale var(--transition-time);

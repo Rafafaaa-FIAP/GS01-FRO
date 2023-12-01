@@ -184,7 +184,7 @@ nav {
 nav img {
   width: 15rem;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: var(--colors-background-1);
   padding: 0.5rem;
   border-radius: 0.5rem;
   transition: scale var(--transition-time);
@@ -213,6 +213,10 @@ nav ul li:hover, nav ul li.active {
 
 h1, h2, h3, h4, h5 {
   font-size: unset;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 h2 {
