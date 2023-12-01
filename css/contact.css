@@ -52,3 +52,50 @@ form#contact-form div.fields {
 form#contact-form button {
   width: 100%;
 }
+
+section#team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--colors-1-base);
+}
+
+section#team table {
+  width: 50%;
+  background-color: var(--colors-background-1);
+  padding: 1rem;
+  border-radius: 1rem;
+  border-spacing: 0;
+  text-wrap: nowrap;
+}
+
+section#team thead {
+  background-color: var(--colors-2-base);
+  color: var(--colors-text-on-color);
+}
+
+section#team thead td:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+section#team thead td:last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+
+section#team tbody tr td:first-child {
+  padding: 1rem;
+}
+
+section#team td {
+  width: max-content;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+section#team img {
+  width: 12.5rem;
+  border: 0.25rem solid var(--colors-2-base);
+  border-radius: 100%;
+}
