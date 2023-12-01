@@ -27,8 +27,13 @@
   <section id="demonstration">
     <div id="demonstration-left">
       <h2>Demonstração</h2>
-      <p>Para melhor entendimento da solução, utilize nossa demonstração da ideia de solução.</p>
+      <p>
+        Para melhor entendimento da solução, utilize nossa demonstração da ideia de solução.
+        <br>
+        <sub>* Os dados utilizados na demonstração são fictícios.</sub>
+      </p>
     </div>
+
     <div id="demonstration-right">
       <div id="cellphone">
         <div class="header">
@@ -36,11 +41,59 @@
           <div class="camera"></div>
           <div>100%</div>
         </div>
-        <div class="content">
-          
-        </div>
-        <div class="footer">
 
+        <div class="main">
+          <div class="profile-data">
+            <i class="bi bi-person-circle"></i>
+            <div class="infos">
+              <p>Olá, usuário</p>
+              <p>NR: 0123456789</p>
+            </div>
+          </div>
+          
+          <div id="content-home" class="content">
+            <button id="open-search" class="default">
+              <i class="bi bi-search"></i>
+              Buscar Redes Credenciadas
+            </button>
+
+            <div id="networks-deaccreditation" class="network-list">
+              <div class="title">
+                <h2>Avisos de Descredenciamento</h2>
+                <p>Últimos locais frequentados</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="content-networks" class="content display-none">
+            <div class="search-header">
+              <button id="close-search" class="default">
+                <i class="bi bi-arrow-left"></i>
+              </button>
+              <h2>Buscar Redes Credenciadas</h2>
+            </div>
+
+            <div id="search-fields">
+              <div class="text-field">
+                <fieldset>
+                    <input type="text" id="search-text" name="search-text" placeholder="Buscar" required />
+                    <legend>
+                        <span>Buscar</span>
+                    </legend>
+                    <label for="search-text" class="placeholder">Buscar</label>
+                </fieldset>
+              </div>
+            </div>
+
+            <div id="searched-networks" class="network-list">
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div>
+            <img src="../images/logo.png" alt="logo hapvida notredame" />
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 
+@import url('../fonts/Inter/font-face.css');
 @import url('../fonts/Poppins/font-face.css');
 
 * {
@@ -23,6 +24,7 @@
 
   --colors-semantic-success-base: #23AD42;
   --colors-semantic-error-base: #EB2525;
+  --colors-semantic-warning-base: #F4D21B;
 
   --colors-background-1: #FFFFFF;
   --colors-background-2: #E6E6E6;
@@ -255,4 +257,8 @@ div#alert.success {
 div#alert.error {
   background-color: var(--colors-semantic-error-base);
   color: var(--colors-text-on-color);
+}
+
+.display-none {
+  display: none !important;
 }

@@ -11,7 +11,7 @@ function changePage(event, path) {
   }
 
   if (window.location.hostname.includes('github.io')) {
-    path = '/front/' + path;
+    path = '/front' + path;
   }
 
   window.location = path;
@@ -23,6 +23,7 @@ function showAlert(message, type) {
   const alertText = alertElem.querySelector('p');
   
   alertElem.className = '';
+  alertIcon.className = '';
   alertIcon.classList.add('bi');
 
   alertText.innerHTML = message;
