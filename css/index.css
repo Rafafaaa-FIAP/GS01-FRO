@@ -43,6 +43,11 @@ section#infos {
   gap: 10rem;
 }
 
+div#infos-left iframe {
+  border: 0.5rem solid var(--colors-1-base);
+  border-radius: 1rem;
+}
+
 div#infos-right {
   display: flex;
   flex-direction: column;
