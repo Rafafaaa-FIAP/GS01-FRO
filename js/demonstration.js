@@ -22,7 +22,7 @@ function updateCellphoneHour() {
 
   let minute = currentDateTime.getMinutes().toString();
   if (minute.length === 1) {
-    minute = '0' + hour;
+    minute = '0' + minute;
   }
 
   cellphoneHour.innerHTML = `${hour}:${minute}`;
