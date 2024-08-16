@@ -11,7 +11,9 @@ function changePage(event, path) {
   }
 
   if (window.location.hostname.includes('github.io')) {
-    path = '/front' + path;
+    const pathNames = window.location.pathname.split('/');
+
+    path = '/' + (pathNames.length > 1 ? (pathNames[1]) : '') + path;
   }
 
   window.location = path;
