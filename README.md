@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">Global Solution 01 - Site</h1>
+  <h1 align="center">Global Solution 01 - Front</h1>
 </div>
 
 <hr/>
